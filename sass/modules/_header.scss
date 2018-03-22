@@ -1,0 +1,99 @@
+.header {
+    height: 800px;
+    width: 100%;
+    background: url(../images/home-top.jpg) no-repeat center;
+    background-size: cover;
+    .logo {
+        margin: 40px 0 0 10%;
+    }
+    .header-topic {
+        display: flex;
+        margin: 5% 0 0 10%;
+        .discover {
+            font: 50px "Rustic";
+            margin: 90px 30px 0 0;
+        }
+        .recipes {
+            font: 150px "Amatic";
+            color: $highlight-color;
+            margin: 20px 0 0 0;
+        }
+    }
+    .create {
+        width: 400px;
+        height: 100px;
+        margin: 2% 0 0 10%;
+        color: $create-color;
+        font: 20px 'Raleway';
+    }
+    .header-btn {
+        margin: 2% 0 0 10%;
+        display: flex;
+        .btn-markets {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 200px;
+            height: 70px;
+            background-color: $btn-color;
+            color: white;
+            border-radius: 15px;
+            i {
+                margin: 0 15px 0 0;
+            }
+        }
+        .apple {
+            margin: 0 40px 0 0;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            .btn-text {
+                display: flex;
+                flex-direction: column;
+                font: 20px 'Raleway';
+                align-items: center;
+                .smaller-text {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 624px) {
+    .header {
+        .header-topic,
+        .create,
+        .header-btn {
+            margin: 5% 0 0 18%;
+            flex-direction: column;
+            .apple {
+                margin: 0 0 20px 0;
+            }
+        }
+        .logo {
+            width: 200px;
+        }
+        .create {
+            width: 300px;
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .header {
+        .logo {
+            width: 150px;
+        }
+        .header-topic {
+            .recipes {
+                font: 100px "Amatic";
+            }
+        }
+        .create {
+            width: 270px;
+            height: 150px;
+        }
+    }
+}

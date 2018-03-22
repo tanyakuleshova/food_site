@@ -1,0 +1,50 @@
+.btn {
+    padding: 16px;
+    border-radius: 4px;
+    font-size: 18px;
+    color: white;
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    z-index: 7;
+}
+
+.menu-btn {
+    @extend .btn;
+    background-color: $highlight-color;
+    box-shadow: 0px 4px 0px 0px $highlight-shadow;
+}
+
+.menu-close-btn {
+    @extend .btn;
+    background-color: $background-color;
+    box-shadow: 0px 4px 0px 0px $text-color;
+    position: absolute;
+}
+
+.menu-container {
+    position: fixed;
+    height: 0;
+    overflow: hidden;
+    width: 100%;
+    background-color: $highlight-color;
+    z-index: 10;
+    text-align: center;
+    transition: 0.35s ease-in;
+    &.opened {
+        height: 100vh;
+    }
+    ul {
+        list-style: none;
+        text-transform: uppercase;
+        font-family: 'Amatic';
+        font-size: 80px;
+        color: white;
+        li {
+            cursor: pointer;
+            &:hover {
+                color: $text-color;
+            }
+        }
+    }
+}

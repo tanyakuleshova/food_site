@@ -1,0 +1,142 @@
+@mixin btn-properties($border-radius, $box-shadow, $color) {
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    color: $color;
+}
+
+
+
+.news-topic {
+    font-family: 'Amatic';
+    font-size: 80px;
+    color: black;
+    margin: 100px 0 30px 100px;
+}
+
+.news-blocks {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-block {
+    background-color: $background-color;
+    border-radius: 10px;
+    font: 20px "Merriweather Sans";
+    position: relative;
+    margin: 20px 0 20px 100px;
+    width: 50%;
+}
+
+.theme {
+    padding: 40px 0 0 50px;
+}
+
+.theme a {
+    text-decoration: none;
+    color: black;
+    transition: 0.5s;
+}
+
+.theme a:hover {
+    color: $highlight-color;
+    text-decoration: none;
+}
+
+.auther {
+    padding: 15px 0 40px 50px;
+    font-size: 12px;
+    color: grey;
+}
+
+.auther a {
+    color: $highlight-color;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.auther a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.btn-arrow {
+    @include btn-properties(50%, 0px 4px 0px 0px #f2f2f2, $highlight-color);
+    padding: 15px 21px;
+    background-color: white;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    transition: 0.5s;
+}
+
+.btn-arrow:hover {
+    @include btn-properties(50, 0px 4px 0px 0px $highlight-color, white);
+    background-color: $highlight-color;
+}
+
+.btn-all-posts {
+    @include btn-properties(20px, 0px 4px 0px 0px $highlight-color, white);
+    padding: 12px 30px 9px 30px;
+    background-color: $highlight-color;
+    font: 15px "Merriweather Sans";
+    margin-left: 100px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-all-posts:hover {
+    color: black;
+}
+
+.btn-news {
+    margin: 50px 0 100px 0;
+}
+
+@media screen and (max-width: 1213px) {
+    .news-block {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 977px) {
+    .news-block {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .news-block {
+        width: 60%;
+        height: 180px;
+    }
+    .btn-arrow {
+        top: 60%;
+        right: 80%;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .news-block {
+        width: 80%;
+        height: 220px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .news-block {
+        width: 80%;
+        height: 220px;
+        margin-left: 50px;
+    }
+    .theme,
+    .auther {
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .theme,
+    .auther {
+        padding-left: 10px;
+    }
+}
